@@ -30,6 +30,7 @@ getDocs(colRef)
     // console.log(snapshot.docs)
     let books = []
     snapshot.docs.forEach(doc => {
+      // ... 为脱壳操作
       books.push({ ...doc.data(), id: doc.id })
     })
     console.log(books)
