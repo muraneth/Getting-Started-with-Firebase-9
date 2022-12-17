@@ -4,12 +4,14 @@ import {
 } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDmXgb_58lO7aK_ujN37pGlNxzWGEU0YpI",
-  authDomain: "fb9-sandbox.firebaseapp.com",
-  projectId: "fb9-sandbox",
-  storageBucket: "fb9-sandbox.appspot.com",
-  messagingSenderId: "867529587246",
-  appId: "1:867529587246:web:dc754ab7840c737f47bdbf"
+
+    authDomain: "test-b8d18.firebaseapp.com",
+    databaseURL: "https://test-b8d18-default-rtdb.firebaseio.com",
+    projectId: "test-b8d18",
+    storageBucket: "test-b8d18.appspot.com",
+    messagingSenderId: "399622639678",
+    appId: "1:399622639678:web:2eaa3e78adbf7d4ee2016f",
+    measurementId: "G-FCW38NXT7X"
 }
 
 // init firebase
@@ -29,6 +31,7 @@ getDocs(colRef)
     snapshot.docs.forEach(doc => {
       books.push({ ...doc.data(), id: doc.id })
     })
+    console.log("aa");
     console.log(books)
   })
   .catch(err => {
